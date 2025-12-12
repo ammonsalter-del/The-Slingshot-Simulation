@@ -2,9 +2,7 @@
 
 An interactive business simulation for teaching entrepreneurship and innovation management. Players run an AI startup through 16 quarters of strategic decisions—navigating funding, hiring, competition, research partnerships, and pivots.
 
-**[▶ Play Now](https://ammonsalter-del.github.io/AI-Startup-Game/)** | **[Download](../../releases)** | **[Teaching Guide](docs/AI_Startup_Game_Teaching_Guide.pdf)**
-
-![The AI Startup Game Screenshot](docs/screenshot.png)
+**[▶ Play Now](https://ammonsalter-del.github.io/AI-Startup-Game/)** 
 
 ## Overview
 
@@ -32,7 +30,7 @@ Most players fail on their first attempt—and that's by design. The game teache
 ## Quick Start
 
 ### To Play
-1. **Online**: Visit [ai-startup-game.github.io](https://ai-startup-game.github.io) and play instantly
+1. **Online**: Visit (https://ammonsalter-del.github.io/AI-Startup-Game/) and play instantly
 2. **Offline**: Download `AIven_v1.0.html` from [Releases](../../releases), open in any modern browser
 
 No installation, accounts, or internet connection required (for offline play).
