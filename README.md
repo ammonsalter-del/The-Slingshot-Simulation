@@ -44,8 +44,7 @@ No installation, accounts, or internet connection required (for offline play).
 The game is designed for teaching entrepreneurship, innovation management, technology strategy, and related courses.
 
 ### Resources
-- **[Teaching Guide]: Comprehensive guide with lesson plans, discussion questions, and assessment ideas
-- **[Quick Start Guide: One-page handout for students
+- [Teaching Guide]: Comprehensive guide with lesson plans, discussion questions, and assessment ideas
 - **[FAQ](FAQ.md)**: Common questions and troubleshooting
 
 ### Ways to Use
