@@ -122,7 +122,7 @@ There are many exciting directions this game could take. Some possibilities incl
 
 ### How to Contribute
 
-We encourage you to use the [GitHub repository]([https://github.com/AI-Startup-Game](https://github.com/ammonsalter-del/AI-Startup-Game)) for all contributions:
+We encourage you to use the [GitHub repository](https://github.com/ammonsalter-del/AI-Startup-Game) for all contributions:
 
 - **Fork the repository**: Create your own version and adapt it freely for your teaching context
 - **Report bugs**: Use the [Issues](../../issues) tab with the bug report template
