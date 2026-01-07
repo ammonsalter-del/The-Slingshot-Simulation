@@ -13,7 +13,7 @@ The Slingshot places students in the role of an AI startup founder making real s
 Over 3-4 simulated years (12-16 quarters), players must:
 
 - Complete three progressively challenging milestones before running out of cash
-- Allocate limited attention (Action Points) across competing priorities
+- Allocate limited attention (Attention Points) across competing priorities
 - Navigate the tension between scientific rigour and commercial pressure
 - Respond to competitors racing toward the same goals
 - Build and retain a team while managing culture and morale
@@ -32,7 +32,6 @@ Most players fail on their first attempt—and that's by design. The game teache
 - **3 Rival Companies**: AI-controlled competitors that race you to milestones (unique rivals per sector)
 - **Multiple Funding Paths**: Bootstrap, angels, accelerators, venture capital, or UK innovation grants
 - **UK Grant Funding System**: Apply to Innovate UK-style grants with realistic assessor feedback and scoring
-- **Strategic Focus System**: Choose quarterly priorities—Growth, Efficiency, R&D, or Investor Relations
 - **Revenue Mechanics**: Build ARR through different business models (B2B SaaS, Healthcare Procurement, Consumer, Research Grants)
 - **Strategic Pivots**: Change direction when competitors get ahead or opportunities emerge
 - **Guided Play Mode**: New players receive coaching tips during their first 4 quarters
@@ -51,7 +50,7 @@ No installation, accounts, or internet connection required (for offline play).
 ### System Requirements
 - Any modern web browser (Chrome, Firefox, Safari, Edge)
 - Desktop or laptop recommended (mobile works but experience is optimised for larger screens)
-- Average game time: 25-35 minutes
+- Average game time: 25-45 minutes
 
 ## For Educators
 
@@ -69,10 +68,10 @@ The Slingshot is designed for teaching entrepreneurship, innovation management, 
 
 ### Sample Lesson Plan (Single Session)
 1. Brief setup (5 min): Explain most will fail—that's expected
-2. Play (25-35 min): Individual or pairs, assign different sectors
+2. Play (25-45 min): Individual or pairs, assign different sectors
 3. Debrief (30-45 min): What surprised you? What was difficult? Connect to theory
 
-See the Teaching Guide for detailed lesson plans for 1-week, 3-week, and 10-week courses.
+See the Teaching Guide for additional lessons.
 
 ## Citation
 
@@ -167,7 +166,7 @@ This game was developed as part of the ESRC-funded project "Profiting from Scien
 ### Team
 - **Lead Author**: Ammon Salter (Warwick Business School, The University of Warwick)
 - **Co-Investigators**: Stefano Baruffaldi (Politecnico di Milano), Federico Bignone (Warwick Business School, The University of Warwick)
-- **Contributors**: Paola Criscuolo, Linus Dahlander, Christos Kolympiris, Orietta Marsili, Rossella Salandra, Philipp Lucas Wähler, Giacomo Salter, Suki Salter
+- **Contributors**: Paola Criscuolo, Linus Dahlander, Panos Desyllas, Christos Kolympiris, Orietta Marsili, Rossella Salandra, Philipp Lucas Wähler, Giacomo Salter, Suki Salter
 
 ### AI Development Assistants
 Claude (Anthropic), Gemini (Google), ChatGPT & GPT-5 (OpenAI)
