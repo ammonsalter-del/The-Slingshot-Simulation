@@ -166,7 +166,7 @@ This game was developed as part of the ESRC-funded project "Profiting from Scien
 ### Team
 - **Lead Author**: Ammon Salter (Warwick Business School, The University of Warwick)
 - **Co-Investigators**: Stefano Baruffaldi (Politecnico di Milano), Federico Bignone (Warwick Business School, The University of Warwick)
-- **Contributors**: Paola Criscuolo, Linus Dahlander, Panos Desyllas, Christos Kolympiris, Orietta Marsili, Rossella Salandra, Philipp Lucas Wähler, Giacomo Salter, Suki Salter
+- **Contributors and Betatesters**: Paola Criscuolo (Imperial College London), Linus Dahlander (ESMT Berlin), Panos Desyllas (University of Bath), Virgilio Falia (University of Bath), Christos Kolympiris (Warwick Business School, The University of Warwick), Orietta Marsili (Univerity of Bristol), Rossella Salandra (University of Bath), Philipp Lucas Wähler (Warwick Business School, The University of Warwick), Giacomo Salter, Suki Salter
 
 ### AI Development Assistants
 Claude (Anthropic), Gemini (Google), ChatGPT & GPT-5 (OpenAI)
