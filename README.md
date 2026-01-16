@@ -91,7 +91,7 @@ The Slingshot is designed for teaching entrepreneurship, innovation management, 
 ### Resources (all available in repository)
 - **Teaching Guide**: Comprehensive guide with lesson plans, discussion questions, and assessment ideas
 - **Quick Start Guide**: One-page handout for students
-- **In-class exercises**: One-page handout for students
+- **In-class exercises**: 16 differnt ways of using the simulation in a classroom, including team and tournament play. 
 - **FAQ** : Common questions and troubleshooting
 
 ### Different Ways to Use
