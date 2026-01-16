@@ -18,11 +18,35 @@ Over 3-4 simulated years (12-16 quarters), players must:
 - Respond to competitors racing toward the same goals
 - Build and retain a team while managing culture and morale
 - Make funding decisions that affect control and runway
-- Apply for UK innovation grants to secure non-dilutive funding
+- Apply for innovation grants to secure non-dilutive funding
 
 The game's timeline reflects reality: the average UK AI unicorn reaches billion-dollar status in just 4.8 years (about 19 quarters).
 
 Most players fail on their first attempt—and that's by design. The game teaches through experience, failure, and replay.
+
+## Learning Objectives (QAA Level 7 / Masters)
+
+Through this simulation, students will develop:
+
+### Knowledge and Understanding
+- **Systematic understanding** of interdependencies between technology development, market positioning, and financial sustainability in early-stage ventures
+- **Critical awareness** of stakeholder tensions (founders, investors, employees, grant bodies) in technology commercialisation
+- **Comprehensive knowledge** of UK startup funding mechanisms: venture capital, angel investment, grants, and bootstrapping
+
+### Cognitive Skills
+- **Critical evaluation** of competing strategic options under uncertainty and time pressure
+- **Synthesis** of quantitative metrics (runway, burn rate) with qualitative factors (team morale, investor relationships) for decision-making
+- **Sound judgement** in the absence of complete data, recognising when advisor recommendations may be biased or context-inappropriate
+
+### Practical Skills
+- **Application** of strategic pivoting frameworks and milestone-driven development
+- **Management** of multiple concurrent priorities across R&D, product, sales, and people functions
+- **Navigation** of funding negotiations, term sheet evaluation, and investor relationship management
+
+### Transferable Skills
+- **Autonomous decision-making** — developing independent judgement rather than reliance on external advice
+- **Resilience and adaptability** — responding to unexpected shocks, market shifts, and competitive threats
+- **Self-reflection** — analysing decision-making patterns and leadership style through post-game review
 
 ## Features
 
