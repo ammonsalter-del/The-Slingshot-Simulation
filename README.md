@@ -6,7 +6,7 @@ An interactive business simulation for teaching entrepreneurship and innovation 
 
 **Play Now** — Visit the repository's GitHub Pages site | **Download** — See Releases | **Teaching Guide** — See docs folder
 
-![The Slingshot Screenshot](docs/screenshot.png)
+![The Slingshot Screenshot](docs/screenshot.png) - play here: https://ammonsalter-del.github.io/The-Slingshot-Simulation/
 
 ## Overview
 
