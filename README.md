@@ -89,7 +89,7 @@ If you use this game in teaching or research, please cite:
 
 ```
 Salter, A., Baruffaldi, S., & Bignone, F. (2026). The Slingshot: An AI Startup Simulation (Version 1.2) 
-[Computer software]. GitHub repository.
+[Computer software]. [GitHub repository] github.com/ammonsalter-del/The-Slingshot-Simulation/
 ```
 
 BibTeX:
@@ -99,7 +99,7 @@ BibTeX:
   title = {The Slingshot: An AI Startup Simulation},
   version = {1.2},
   year = {2026},
-  note = {GitHub repository}
+  note = {[GitHub repository](https://github.com/ammonsalter-del/The-Slingshot-Simulation/}
 }
 ```
 
