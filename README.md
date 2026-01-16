@@ -4,7 +4,7 @@
 
 An interactive business simulation for teaching entrepreneurship and innovation management. Players run an AI startup through 16 quarters of strategic decisions—navigating funding, hiring, competition, research partnerships, and pivots.
 
-🎮 **[Play Now](https://ammonsalter-del.github.io/The-Slingshot-Simulation/)** | 📥 **[Download](https://github.com/ammonsalter-del/The-Slingshot-Simulation/releases)** | 📚 **[Teaching Guide](docs/)**
+🎮 **[Play Now](https://ammonsalter-del.github.io/The-Slingshot-Simulation/)** 
 
 ## Overview
 
