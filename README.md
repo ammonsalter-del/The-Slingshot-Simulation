@@ -138,13 +138,14 @@ There are many exciting directions this game could take. Some possibilities incl
 - **New sectors**: Adapt the game for different industries beyond AI—biotech, fintech, cleantech, or traditional sectors
 - **Co-founder dynamics**: Add the option to start with co-founders, introducing equity splits, founder disagreements, complementary skills, and the complex interpersonal dynamics that shape real startup teams
 - **Family business variant**: Explore the unique dynamics of succession, family governance, and multi-generational strategy
-- **Country-specific versions**: Localise the game for different entrepreneurial ecosystems (US, Germany, Singapore, etc.) with region-specific funding paths, regulations, and market dynamics
+- **Country-specific versions**: Localise the game for different entrepreneurial ecosystems (US, Canada, China, India, EU, Germany, Singapore, etc.) with context-specific funding paths, regulations, and market dynamics
 - **Teacher module**: A dashboard for educators to organise class or group activities, track student progress, set up tournaments, and compare outcomes across cohorts
 - **Research mode**: Tools for experimental use in research projects, including data export, controlled scenario variations, and participant tracking for academic studies
 - **Mobile native app**: Develop a dedicated iOS/Android version optimised for touch interfaces
 - **Multiplayer mode**: Allow students to compete directly against each other rather than AI rivals
 - **Extended scenarios**: Add post-exit gameplay, IPO paths, or corporate venture capital interactions
 - **Accessibility improvements**: Enhanced screen reader support, colour-blind modes, and keyboard navigation
+- **Budding entrepreneurs version**: A slimmed down and less complex version targetted at first-year undergraduate and secondary school students (UK - A-Level) 
 
 ### How to Contribute
 
