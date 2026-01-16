@@ -30,7 +30,7 @@ Most players fail on their first attempt—and that's by design. The game teache
 
 - **8 AI Sectors**: Healthcare, Robotics, Finance, Creative AI, Cybersecurity, Climate Tech, Legal Tech, Education—each with unique challenges
 - **12 Founder Types**: From Academic to Serial Founder to First-Timer, each with different strengths and weaknesses
-- **450+ Unique Events**: Realistic scenarios drawn from actual startup experiences
+- **550+ Unique Events**: Realistic scenarios drawn from actual startup experiences
 - **3 Rival Companies**: AI-controlled competitors that race you to milestones (unique rivals per sector)
 - **Multiple Funding Paths**: Bootstrap, angels, accelerators, venture capital, or UK innovation grants
 - **UK Grant Funding System**: Apply to Innovate UK-style grants with realistic assessor feedback and scoring
