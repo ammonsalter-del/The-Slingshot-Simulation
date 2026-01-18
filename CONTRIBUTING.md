@@ -1,6 +1,6 @@
-# Contributing to The AI Startup Game
+# Contributing to The Slingsthor: An AI Startup Simulation
 
-Thank you for your interest in contributing to The AI Startup Game! This project is open source under CC BY-NC-SA 4.0, and we welcome contributions from educators, developers, and students.
+Thank you for your interest in contributing to The Slingshot: An AI Startup Simulation! This project is open source under CC BY-NC-SA 4.0, and we welcome contributions from educators, developers, and students.
 
 ## Ways to Contribute
 
@@ -93,4 +93,4 @@ If you're unsure about anything, please ask in the Discussions section before in
 
 By contributing to this project, you agree that your contributions will be licensed under the same CC BY-NC-SA 4.0 license that covers the project.
 
-Thank you for helping make The AI Startup Game better!
+Thank you for helping make The Slingshot: An AI Startup Simulation better!
