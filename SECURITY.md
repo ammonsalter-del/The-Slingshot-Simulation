@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI Startup Game is a client-side educational application that runs entirely in the user's browser. It does not collect, transmit, or store any personal data on external servers.
+The Slingshot: An AI Startup Simluation is a client-side educational application that runs entirely in the user's browser. It does not collect, transmit, or store any personal data on external servers.
 
 ## Supported Versions
 
