@@ -6,6 +6,8 @@ An interactive business simulation for teaching entrepreneurship and innovation 
 
 🎮 **[Play Now](https://ammonsalter-del.github.io/The-Slingshot-Simulation/)** 
 
+🎮 **[Website](https://slingshotsim.org/index.html)** 
+
 ## Overview
 
 The Slingshot places students in the role of an AI startup founder making real strategic decisions under uncertainty. Set in the UK's thriving AI ecosystem in 2026, players experience what it takes to build a billion-dollar company in one of the world's most dynamic startup environments.
