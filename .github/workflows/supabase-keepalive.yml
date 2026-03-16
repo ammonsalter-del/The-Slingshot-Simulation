@@ -1,0 +1,28 @@
+name: Supabase Keep-Alive
+
+# Pings Supabase weekly to prevent free-tier auto-pause
+# Requires two repository secrets:
+#   SUPABASE_URL  - your project URL (e.g. https://xxxxx.supabase.co)
+#   SUPABASE_KEY  - your anon/public key
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9am UTC
+  workflow_dispatch:       # Manual trigger
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Supabase
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            "${{ secrets.SUPABASE_URL }}/rest/v1/benchmarks?select=count&limit=1" \
+            -H "apikey: ${{ secrets.SUPABASE_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}")
+          echo "Supabase responded with HTTP $response"
+          if [ "$response" -ge 200 ] && [ "$response" -lt 300 ]; then
+            echo "Keep-alive successful"
+          else
+            echo "Keep-alive failed" && exit 1
+          fi
