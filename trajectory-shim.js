@@ -98,8 +98,8 @@
         <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1rem;">
           <p style="color:#94a3b8;font-size:0.7rem;margin:0;line-height:1.5;">
             <span style="color:#6ee7b7;">Privacy:</span>
-            No real names, emails, accounts, or cookies. Only your nickname and game outcomes are recorded anonymously on EU servers (Frankfurt) to build benchmarks. This is a research project —
-            <a href="https://slingshotsim.org/files/classroom.html" target="_blank" style="color:#a5b4fc;text-decoration:underline;">learn more</a>.
+            No real names, emails, accounts or cookies — no personal information is collected or retained. Your chosen nickname and game outcomes are stored anonymously on EU servers (Frankfurt) purely to show you how your play compares with other founders. It is feedback for you, not a data-collection or research exercise —
+            <a href="https://slingshotsim.org/classroom.html" target="_blank" style="color:#a5b4fc;text-decoration:underline;">learn more</a>.
           </p>
         </div>
       </div>
@@ -143,7 +143,7 @@
 
         if (sessErr || !session) {
           showError('Join code not found. Check the code or leave it blank to play solo.');
-          btn.textContent = 'Play with benchmarking';
+          btn.textContent = 'Compare my game';
           btn.disabled = false;
           return;
         }
@@ -260,6 +260,7 @@
   // Reads game state, writes to Supabase, then refreshes benchmarks.
 
   async function recordOutcome(g, reason) {
+    if (g && g.gameMode === 'seed') return; // Seed is a learning mode; never benchmarked
     if (!recordingEnabled || !playerId) return;
 
     try {
@@ -473,16 +474,21 @@
 
     distribution.sort((a, b) => b.count - a.count);
 
-    let barsHtml = distribution.map((d) => {
+    // Show top 5 choices as wrapping pills, rest grouped as "Other"
+    const top = distribution.slice(0, 5);
+    const rest = distribution.slice(5);
+    const restCount = rest.reduce((s, d) => s + d.count, 0);
+    if (restCount > 0) top.push({ value: 'Other', count: restCount });
+
+    let pillsHtml = top.map((d) => {
       const pct = Math.round(d.count / total * 100);
-      if (pct < 3) return '';
+      if (pct < 2) return '';
       const isPlayer = d.value === playerChoice;
       const bg = isPlayer ? '#6366f1' : '#374151';
       const outline = isPlayer ? 'outline:2px solid #a5b4fc;outline-offset:-2px;' : '';
-      const weight = isPlayer ? 'font-weight:500;' : '';
+      const weight = isPlayer ? 'font-weight:600;' : '';
       const textColor = isPlayer ? 'color:white;' : 'color:#cbd5e1;';
-      const showLabel = pct > 10;
-      return `<div style="flex:${pct};background:${bg};height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:0.75rem;${textColor}${weight}${outline}white-space:nowrap;overflow:hidden;" title="${d.value}: ${pct}%">${showLabel ? d.value + ' ' + pct + '%' : pct + '%'}</div>`;
+      return `<div style="background:${bg};padding:4px 10px;border-radius:6px;font-size:0.7rem;${textColor}${weight}${outline}white-space:nowrap;" title="${d.value}: ${pct}%">${d.value} ${pct}%</div>`;
     }).join('');
 
     return `
@@ -491,7 +497,7 @@
           <span style="font-size:0.85rem;color:#94a3b8;">${label}</span>
           <span style="font-size:0.8rem;color:#a5b4fc;">You: ${playerChoice || 'N/A'}</span>
         </div>
-        <div style="display:flex;gap:4px;">${barsHtml}</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;">${pillsHtml}</div>
       </div>`;
   }
 
@@ -660,7 +666,7 @@
 
           <div style="text-align:center;padding-top:1rem;margin-top:1.25rem;">
             <p style="color:#475569;font-size:0.7rem;">
-              ${playerNickname ? 'Playing as <span style="color:#94a3b8;">' + playerNickname + '</span> · ' : ''}Look up results at <a href="https://slingshotsim.org/files/classroom.html" target="_blank" style="color:#64748b;text-decoration:none;">slingshotsim.org</a>
+              ${playerNickname ? 'Playing as <span style="color:#94a3b8;">' + playerNickname + '</span> · ' : ''}Look up results at <a href="https://slingshotsim.org/classroom.html" target="_blank" style="color:#64748b;text-decoration:none;">slingshotsim.org</a>
             </p>
           </div>
         </div>`;
@@ -682,7 +688,7 @@
         <h3 style="font-size:1.25rem;font-weight:600;color:#f1f5f9;margin:0 0 0.5rem;">Your Entrepreneurial Journey</h3>
         <p style="color:#a5b4fc;font-size:0.85rem;margin:0 0 0.75rem;">Your game has been recorded!</p>
         <p style="color:#94a3b8;font-size:0.85rem;margin:0 0 1.5rem;line-height:1.5;">
-          There aren't enough games yet to show comparisons. As more players finish, you'll see how your journey stacks up. Look up your results later at <a href="https://slingshotsim.org/files/classroom.html" target="_blank" style="color:#818cf8;text-decoration:none;">slingshotsim.org</a>.
+          There aren't enough games yet to show comparisons. As more players finish, you'll see how your journey stacks up. Look up your results later at <a href="https://slingshotsim.org/classroom.html" target="_blank" style="color:#818cf8;text-decoration:none;">slingshotsim.org</a>.
         </p>
         <div style="background:linear-gradient(135deg, #1e1b4b, #312e81);border-radius:0.75rem;padding:1.25rem;border:1px solid #3730a3;">
           <p style="color:#cbd5e1;font-size:0.9rem;font-style:italic;margin:0 0 0.35rem;line-height:1.5;">"I have not failed. I've just found 10,000 ways that won't work."</p>
@@ -780,6 +786,9 @@
     const originalShowPreamble2 = game.showPreamblePage2.bind(game);
 
     game.showPreamblePage2 = function() {
+      // Seed (learning) mode: no benchmarking, skip the opt-in entirely
+      if (game.gameMode === 'seed') { originalShowPreamble2(); return; }
+
       // Hide preamble 1 (the landing page)
       const p1 = document.getElementById('preambleModal1');
       if (p1) { p1.classList.add('hidden'); p1.classList.remove('flex'); }
