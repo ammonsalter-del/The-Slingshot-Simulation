@@ -2,6 +2,8 @@
 
 **Version 2** | June 2026
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20749017.svg)](https://doi.org/10.5281/zenodo.20749017)
+
 An interactive, browser-based business simulation for teaching entrepreneurship and innovation management. Players run an AI startup through sixteen quarters of strategic decisions — funding, hiring, competition, market opportunities, milestones and pivots — learning to make consequential decisions under uncertainty through experience, failure and replay.
 
 **▶ Play now:** https://slingshotsim.org
@@ -45,7 +47,7 @@ A public **Player AI Assistant** is open to everyone and answers students' quest
 
 If you use this software in teaching or research, please cite it using the metadata in `CITATION.cff`:
 
-> Salter, A., Baruffaldi, S., & Bignone, F. (2026). *The Slingshot: An AI Startup Simulation* (Version 2) [Computer software]. https://github.com/ammonsalter-del/The-Slingshot-Simulation
+> Salter, A., Baruffaldi, S., & Bignone, F. (2026). *The Slingshot: An AI Startup Simulation* (Version 2) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.20749017
 
 ## Licence
 
