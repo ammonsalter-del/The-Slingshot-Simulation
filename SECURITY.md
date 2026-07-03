@@ -2,43 +2,73 @@
 
 ## Overview
 
-The Slingshot: An AI Startup Simluation is a client-side educational application that runs entirely in the user's browser. It does not collect, transmit, or store any personal data on external servers.
+The Slingshot is a client-side educational game. The game itself is a single HTML file that runs entirely in the browser: no accounts, no logins, no cookies, and no personal data collected.
+
+Version 2 adds **Trajectory**, an optional benchmarking feature. Everything below describes exactly what it does.
 
 ## Supported Versions
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0.x   | :white_check_mark: |
+| 2.x     | :white_check_mark: |
+| 1.x     | :x:                |
 
-## Security Considerations
+## Data Handling
 
-### Data Handling
-- The game runs entirely in the browser
-- No user data is transmitted to external servers
-- No accounts or authentication required
-- Game state is stored only in browser memory (lost on page refresh)
+### The game
+- Runs entirely in the browser; game state is held in browser memory
+- No personal data is collected or transmitted by gameplay itself
+- No accounts or authentication
 
-### Third-Party Resources
-The game loads the following external resources:
-- Tailwind CSS (from cdn.tailwindcss.com)
-- jsPDF library (from cdnjs.cloudflare.com)
+### Trajectory (optional benchmarking)
+- Entirely opt-in: players may skip it and play the game unchanged
+- Players are identified only by a self-chosen nickname (30 characters max) and a study level — no real names, no email addresses, no accounts, no cookies
+- Anonymous game outcomes (choices, milestones, valuation and similar gameplay metrics) are stored on EU servers (Supabase, Frankfurt) solely to show players how their game compares with others
+- The database is protected by row-level security: public clients can add and read benchmark entries but cannot delete records, and game outcomes cannot be modified once written
+- All values returned from the database are HTML-escaped before display
 
-These are well-established CDN services, but users concerned about external dependencies can review the source code and host their own copies of these libraries.
+### Seed mode
+Seed (learner) mode is never benchmarked and makes no network requests to the benchmarking service.
 
-### Offline Use
-For maximum privacy, download the HTML file and play offline. The offline version functions identically without any network requests.
+## For University IT and Data Protection Teams
+
+The Slingshot is designed so that **no personal data is processed**, which is the shortest possible GDPR story:
+
+- **No personal data collected.** No real names, email addresses, student numbers, accounts, or IP-based profiles. Players who opt into benchmarking are identified only by a nickname they invent, and are advised to pick something not linked to their identity.
+- **No cookies or tracking.** The game sets no cookies and uses no analytics or advertising trackers, so no consent banner is required under the ePrivacy rules.
+- **EU data residency.** The anonymous benchmarking data that does exist is stored on Supabase servers in Frankfurt, Germany. Nothing is transferred outside the EEA.
+- **No integration with university systems.** The game needs no LMS integration, no student authentication, and no procurement of user licences. Students simply open a web page.
+- **Nothing to delete.** Because records are anonymous, they contain no personal data to be subject to access or erasure requests. A student who wants a benchmarking entry removed can contact the address below with their nickname.
+- **Fully auditable.** The complete source code, including all network calls, is public in this repository. Your security team can verify every claim above by reading it.
+- **Offline option.** Institutions that prefer zero network activity can download the HTML file and run it locally or from their own servers, with benchmarking disabled.
+
+In our assessment no DPIA is required, as no personal data is processed; institutions applying their own thresholds are welcome to contact us with questions.
+
+## Third-Party Resources
+
+The game and website load the following external resources:
+- Tailwind CSS (cdn.tailwindcss.com)
+- jsPDF (cdnjs.cloudflare.com)
+- Supabase JavaScript client (cdn.jsdelivr.net)
+
+Users concerned about external dependencies can review the source code and host their own copies.
+
+## Offline Use
+
+The game can be downloaded and played offline. Offline play functions identically, with benchmarking silently disabled.
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability in The AI Startup Game, please report it responsibly:
+If you discover a security issue — for example a cross-site scripting vulnerability, or a problem with how external content or benchmark data is handled — please report it responsibly.
 
-1. **Do not** open a public issue for security vulnerabilities
-2. Contact the maintainers directly via the repository's security advisories feature
-3. Provide a clear description of the vulnerability and steps to reproduce it
-4. Allow reasonable time for the issue to be addressed before any public disclosure
+**Email**: ammonsalter@icloud.com
 
-We appreciate responsible disclosure and will acknowledge contributors who help improve the security of the project.
+Please include a description of the vulnerability, steps to reproduce it, and the potential impact. Do not open a public issue for security vulnerabilities. We will acknowledge receipt within 7 days and aim to address confirmed vulnerabilities promptly.
 
-## Scope
+## What This Policy Does Not Cover
 
-Please note that this is educational software provided as-is. The security considerations here relate to the software itself, not to any decisions players might make based on gameplay.
+- Vulnerabilities in browsers, operating systems, or third-party services (GitHub Pages, Supabase, CDNs)
+- Issues arising from user modifications to the source code
+- Gameplay bugs (please use the bug report issue template for those)
+
+Thank you for helping keep this project safe.
