@@ -27,6 +27,15 @@
   let gameStartTime = null;
   let sb = null; // Supabase client, initialised lazily
 
+  // ==================== HTML ESCAPING ====================
+  // All values that originate from the database (other players' input)
+  // must pass through this before being inserted into innerHTML.
+  function escapeHtml(v) {
+    return String(v == null ? '' : v).replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
   // ==================== SUPABASE INIT ====================
   function initSupabase() {
     if (sb) return sb;
@@ -124,6 +133,7 @@
     const joinCode = (document.getElementById('trajJoinCode').value || '').trim().toUpperCase();
 
     if (!nickname) { showError('Please enter a nickname.'); return; }
+    if (nickname.length > 30) { showError('Nickname must be 30 characters or fewer.'); return; }
     if (!level) { showError('Please select your level.'); return; }
 
     const btn = document.getElementById('trajOptIn');
@@ -488,14 +498,14 @@
       const outline = isPlayer ? 'outline:2px solid #a5b4fc;outline-offset:-2px;' : '';
       const weight = isPlayer ? 'font-weight:600;' : '';
       const textColor = isPlayer ? 'color:white;' : 'color:#cbd5e1;';
-      return `<div style="background:${bg};padding:4px 10px;border-radius:6px;font-size:0.7rem;${textColor}${weight}${outline}white-space:nowrap;" title="${d.value}: ${pct}%">${d.value} ${pct}%</div>`;
+      return `<div style="background:${bg};padding:4px 10px;border-radius:6px;font-size:0.7rem;${textColor}${weight}${outline}white-space:nowrap;" title="${escapeHtml(d.value)}: ${pct}%">${escapeHtml(d.value)} ${pct}%</div>`;
     }).join('');
 
     return `
       <div style="margin-bottom:1.25rem;">
         <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
           <span style="font-size:0.85rem;color:#94a3b8;">${label}</span>
-          <span style="font-size:0.8rem;color:#a5b4fc;">You: ${playerChoice || 'N/A'}</span>
+          <span style="font-size:0.8rem;color:#a5b4fc;">You: ${escapeHtml(playerChoice) || 'N/A'}</span>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:6px;">${pillsHtml}</div>
       </div>`;
@@ -666,7 +676,7 @@
 
           <div style="text-align:center;padding-top:1rem;margin-top:1.25rem;">
             <p style="color:#475569;font-size:0.7rem;">
-              ${playerNickname ? 'Playing as <span style="color:#94a3b8;">' + playerNickname + '</span> · ' : ''}Look up results at <a href="https://slingshotsim.org/classroom.html" target="_blank" style="color:#64748b;text-decoration:none;">slingshotsim.org</a>
+              ${playerNickname ? 'Playing as <span style="color:#94a3b8;">' + escapeHtml(playerNickname) + '</span> · ' : ''}Look up results at <a href="https://slingshotsim.org/classroom.html" target="_blank" style="color:#64748b;text-decoration:none;">slingshotsim.org</a>
             </p>
           </div>
         </div>`;
