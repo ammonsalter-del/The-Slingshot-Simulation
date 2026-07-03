@@ -30,12 +30,15 @@ Version 2 adds **Trajectory**, an optional benchmarking feature. Everything belo
 ### Seed mode
 Seed (learner) mode is never benchmarked and makes no network requests to the benchmarking service.
 
+### Analytics (Umami)
+The game uses Umami, a privacy-focused analytics tool, to collect anonymous, aggregate usage statistics: page views, feature clicks, country-level region, and device type. Umami sets no cookies, builds no user profiles, and respects the browser's Do Not Track setting. What is collected is described to players inside the game.
+
 ## For University IT and Data Protection Teams
 
 The Slingshot is designed so that **no personal data is processed**, which is the shortest possible GDPR story:
 
 - **No personal data collected.** No real names, email addresses, student numbers, accounts, or IP-based profiles. Players who opt into benchmarking are identified only by a nickname they invent, and are advised to pick something not linked to their identity.
-- **No cookies or tracking.** The game sets no cookies and uses no analytics or advertising trackers, so no consent banner is required under the ePrivacy rules.
+- **No cookies.** The game sets no cookies and uses no advertising trackers. Usage counting is done with Umami, a cookieless analytics tool that collects only anonymous aggregate statistics (see Analytics above) — which is why no cookie consent banner is required.
 - **EU data residency.** The anonymous benchmarking data that does exist is stored on Supabase servers in Frankfurt, Germany. Nothing is transferred outside the EEA.
 - **No integration with university systems.** The game needs no LMS integration, no student authentication, and no procurement of user licences. Students simply open a web page.
 - **Nothing to delete.** Because records are anonymous, they contain no personal data to be subject to access or erasure requests. A student who wants a benchmarking entry removed can contact the address below with their nickname.
@@ -50,6 +53,7 @@ The game and website load the following external resources:
 - Tailwind CSS (cdn.tailwindcss.com)
 - jsPDF (cdnjs.cloudflare.com)
 - Supabase JavaScript client (cdn.jsdelivr.net)
+- Umami analytics (cloud.umami.is) — cookieless, anonymous, aggregate only
 
 Users concerned about external dependencies can review the source code and host their own copies.
 
@@ -61,7 +65,7 @@ The game can be downloaded and played offline. Offline play functions identicall
 
 If you discover a security issue — for example a cross-site scripting vulnerability, or a problem with how external content or benchmark data is handled — please report it responsibly.
 
-**Email**: ammonsalter@icloud.com
+**Email**: ammon.salter@wbs.ac.uk
 
 Please include a description of the vulnerability, steps to reproduce it, and the potential impact. Do not open a public issue for security vulnerabilities. We will acknowledge receipt within 7 days and aim to address confirmed vulnerabilities promptly.
 
