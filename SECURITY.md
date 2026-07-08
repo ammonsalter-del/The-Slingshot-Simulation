@@ -61,6 +61,17 @@ Users concerned about external dependencies can review the source code and host 
 
 The game can be downloaded and played offline. Offline play functions identically, with benchmarking silently disabled.
 
+## Repository Security
+
+Because the game is distributed as static files served from this repository, repository integrity is the project's primary security boundary.
+
+- Write access is restricted to a single maintainer; no collaborator access is granted
+- The maintainer account is protected by two-factor authentication
+- The `main` branch is protected against force pushes and deletion
+- Dependabot alerts are enabled
+- The game has no build pipeline and minimal third-party dependencies (listed above), limiting supply-chain exposure
+- All source code is public and independently auditable
+
 ## Reporting a Vulnerability
 
 If you discover a security issue — for example a cross-site scripting vulnerability, or a problem with how external content or benchmark data is handled — please report it responsibly.

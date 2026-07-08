@@ -10,9 +10,11 @@ An interactive, browser-based business simulation for teaching entrepreneurship 
 
 It runs in any modern browser. No installation, no accounts, no server — a single HTML file that also works offline once loaded.
 
+Since launch in January 2026 it has been played by more than 1,900 people in 60 countries. A game takes 25 to 40 minutes, depending on experience.
+
 ## Overview
 
-The Slingshot places students in the role of a first-time AI startup founder making real strategic decisions under uncertainty. Set in the UK's AI ecosystem, players spend limited attention across competing priorities, build a team, raise money, respond to rivals, and race to complete three progressive milestones before the cash or the time runs out.
+The Slingshot places students in the role of a first-time AI startup founder making real strategic decisions under uncertainty. Set in the UK's AI ecosystem, players spend limited attention across competing priorities, build a team, raise money, respond to rivals, and race to complete three progressive milestones before the cash or the time runs out. The design builds on the attention-based view of the firm (Ocasio, 1997): attention is the scarce resource, and the central tension is allocating it between building internal capability and engaging the outside world that holds the resources a venture needs.
 
 Over sixteen quarters (about four years), players must:
 
@@ -37,11 +39,15 @@ Most players fail on their first attempt — and that is by design. The game tea
 
 ## For educators
 
-The Slingshot is built for teaching entrepreneurship, innovation management, strategy and technology commercialisation, across undergraduate, postgraduate and executive courses.
+The Slingshot is built for teaching entrepreneurial strategy in nascent industries, technology venturing, innovation management and technology commercialisation, across undergraduate, postgraduate and executive courses. Assessment guidance, class formats and FAQs: https://slingshotsim.org/educators.html
 
 The full **Educators Pack** — companions, a ready-to-teach slide deck, assignments, quizzes, classroom exercises, discussion prompts, sector mini-cases, and two AI assistants — is **not held in this repository**. It is shared with educators on request, free, to keep the educator-only materials (which reveal game mechanics and hold assessment answers) away from students. Request access from **ammon.salter@wbs.ac.uk**.
 
 A public **Player AI Assistant** is open to everyone and answers students' questions during play without revealing the engine.
+
+## The family
+
+The Slingshot is part of a family of free, open-source simulations in innovation and entrepreneurship: [The Disruptor](https://disruptorsim.org), a corporate entrepreneurship and innovation simulation played as Chief Innovation Officer, and [Build, Bin, Boost](https://buildbinboost.org/), where you run a technology company's R&D portfolio as Head of R&D. [The Innovation and Entrepreneurship Playbook](https://ieplaybook.substack.com) follows the whole family.
 
 ## Citation
 
