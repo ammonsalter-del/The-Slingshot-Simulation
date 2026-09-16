@@ -51686,7 +51686,7 @@ class Game {
                   <div class="font-semibold text-slate-600 mb-1">Pass this quarter</div>
                   <p class="text-sm text-slate-500 mb-2">Focus your attention elsewhere. Small setback in this area.</p>
                   <div class="flex flex-wrap gap-2 text-xs">
-                    <span class="bg-red-50 text-red-600 px-2 py-1 rounded">↓ ${d === 'research' ? 'Research' : d === 'dev' ? 'Product' : d === 'marketing' ? 'Sales & Marketing' : 'People'} (-1)</span>
+                    <span class="bg-red-50 text-red-600 px-2 py-1 rounded">↓ ${d === 'research' ? 'Research' : d === 'dev' ? 'Product' : d === 'marketing' ? 'Sales & Marketing' : 'People'}</span>
                   </div>
                 </div>
               </div>
@@ -64531,7 +64531,8 @@ this.lastTurnOutcomes.push(outcome);
     // Stats section
     // For bankrupt/failed companies, valuation is £0 — the company is dead
     const isBankrupt = reason === "bankrupt" || this.metrics.cash <= 0;
-    const finalValuation = isBankrupt ? 0 : this.metrics.val;
+    const _wonOut = reason === "allMilestones";   // 16 Sept 2026: only a run that finished every milestone keeps its closing valuation; the others are shown at their peak, as the postcard does
+    const finalValuation = isBankrupt ? 0 : (_wonOut ? this.metrics.val : (this.peakValuation || this.metrics.val));
     const peakVal = this.peakValuation || this.metrics.val;
 
     document.getElementById("endStats").innerHTML = `
@@ -64544,7 +64545,7 @@ this.lastTurnOutcomes.push(outcome);
         <div class="font-bold text-slate-800">${this.completedMilestones.length} of 3</div>
       </div>
       <div class="${isBankrupt ? 'bg-red-50' : 'bg-slate-50'} rounded-lg p-3">
-        <div class="text-slate-500 text-xs">${isBankrupt ? 'Company Value' : 'Final Valuation'}</div>
+        <div class="text-slate-500 text-xs">${isBankrupt ? 'Company Value' : (_wonOut ? 'Final Valuation' : 'Peak Valuation')}</div>
         <div class="font-bold ${isBankrupt ? 'text-red-600' : 'text-emerald-600'}">${isBankrupt ? '£0 — Bankrupt' : '£' + finalValuation.toLocaleString() + 'k'}</div>
       </div>
       <div class="bg-slate-50 rounded-lg p-3">
@@ -74146,9 +74147,9 @@ render();
     }
     
     // Add exit value context
-    const valuation = this.metrics.val || 1000;
+    const valuation = this.metrics.val || this.peakValuation || 0;   // 16 Sept 2026: a failed run's valuation is zeroed, and the old fallback invented £1.0M
     const founderValue = Math.round(valuation * (ownership.founder / 100));
-    insights.push(`At current ${formatValuation(valuation)} valuation: founder stake worth ${formatValuation(founderValue)}`);
+    insights.push(`At ${this.metrics.val ? 'current' : 'peak'} ${formatValuation(valuation)} valuation: founder stake worth ${formatValuation(founderValue)}`);
     
     return { summary: narrative, timeline, insights };
   }
@@ -74882,7 +74883,7 @@ render();
     const pdfModeLabel = this.extremeMode ? 'Extreme mode' : (this.gameMode === 'seed' ? 'Seed mode' : 'Core mode');
     const summaryLine = failure
       ? `${this.completedMilestones.length}/3 milestones • ${this.turn} quarters • £0 cash remaining • ${pdfModeLabel}`
-      : `${this.completedMilestones.length}/3 milestones • ${this.turn} quarters • ${fmt(this.metrics.val)} valuation • ${pdfModeLabel}`;
+      : `${this.completedMilestones.length}/3 milestones • ${this.turn} quarters • ${success ? fmt(this.metrics.val) + ' valuation' : fmt(this.peakValuation || this.metrics.val) + ' peak valuation'} • ${pdfModeLabel}`;
     doc.text(summaryLine, pageWidth / 2, y, { align: 'center' });
     y += 18;
     
@@ -74928,7 +74929,8 @@ render();
       doc.text(`Team at end: ${this.metrics.staff} people`, margin + 70, y);
     } else {
       doc.setTextColor(30);
-      doc.text(`Valuation: ${fmt(this.metrics.val)}`, margin + 8, y);
+      // 16 Sept 2026: the postcard shows the peak whenever the run did not complete all three milestones; the report now follows the same rule, since the game zeroes the valuation for every other ending
+      doc.text(success ? `Valuation: ${fmt(this.metrics.val)}` : `Peak valuation: ${fmt(this.peakValuation || this.metrics.val)}`, margin + 8, y);
       doc.text(`Equity retained: ${this.metrics.equity.toFixed(1)}%`, margin + 70, y);
       y += 5;
       doc.text(`Team size: ${this.metrics.staff} people`, margin + 8, y);
@@ -83991,12 +83993,26 @@ function drawFloor(level){
   else if (TH_.brick){ for (let f=W.f0+0.14; f<W.f1-0.01; f+=0.14) s += rectB(f-0.005,f+0.005,W.h0,W.h1,fc); for (const h of [70,140]) s += rectB(W.f0,W.f1,h-1.2,h+1.2,fc); }
   else { for (let k=1;k<4;k++){ const f=W.f0+k*(W.f1-W.f0)/4; s += rectB(f-0.006,f+0.006,W.h0,W.h1,fc); } }
   // company poster: the venture's name, what it does, where it is
-  const co = SN.company || {}; const pName = String(co.name || 'The venture').toUpperCase().slice(0, 22), pDesc = String(co.tag || '').slice(0, 30), pLoc = String((SN.location && SN.location.name) || '').slice(0, 26);
+  const co = SN.company || {}; const pName = String(co.name || 'The venture').toUpperCase().slice(0, 22), pLoc = String((SN.location && SN.location.name) || '').slice(0, 26);
+  // 16 Sept 2026 (Ammon: the poster text ran off the sign): the first sentence only, wrapped to two short lines that fit the board
+  const pDescLines = (() => {
+    const first = String(co.tag || '').split(/(?<=\.)\s|\.\s*$/)[0].replace(/\.$/, '').trim();
+    const words = first.split(/\s+/).filter(Boolean); const lines = []; let line = '';
+    for (const w of words) {
+      if (!line) { line = w; continue; }
+      if ((line + ' ' + w).length <= 20) { line += ' ' + w; } else { lines.push(line); line = w; if (lines.length === 2) break; }
+    }
+    if (line && lines.length < 2) lines.push(line);
+    const out = lines.slice(0, 2);
+    const shown = out.join(' ');
+    if (shown.length < first.length) out[out.length - 1] = out[out.length - 1] + '…';   // the sentence did not fit, so say so
+    return out;
+  })();
   s += rectB(fb(6),fb(66),66,112,'#0f172a','stroke="#475569" stroke-width="2"');
   const po = Pb(fb(10),102);
   s += `<text x="${po.x}" y="${po.y}" font-size="${pName.length > 14 ? 5.6 : 7.4}" fill="#a5b4fc" font-weight="700" font-family="system-ui" transform="${skB(po.x)}">${esc(pName)}</text>`;
-  const po2 = Pb(fb(10),90); s += `<text x="${po2.x}" y="${po2.y}" font-size="5.2" fill="#e2e8f0" font-family="system-ui" transform="${skB(po2.x)}">${esc(pDesc)}</text>`;
-  const po3 = Pb(fb(10),79); s += `<text x="${po3.x}" y="${po3.y}" font-size="5.4" fill="#94a3b8" font-family="system-ui" transform="${skB(po3.x)}">${esc(pLoc)}</text>`;
+  pDescLines.forEach((ln, i) => { const pd = Pb(fb(10), 91 - i*7); s += `<text x="${pd.x}" y="${pd.y}" font-size="4.6" fill="#e2e8f0" font-family="system-ui" transform="${skB(pd.x)}">${esc(ln)}</text>`; });
+  const po3 = Pb(fb(10), pDescLines.length > 1 ? 76 : 79); s += `<text x="${po3.x}" y="${po3.y}" font-size="5.4" fill="#94a3b8" font-family="system-ui" transform="${skB(po3.x)}">${esc(pLoc)}</text>`;
   // funders wall: a plaque and framed pictures of the funders who have signed so far
   const FW0 = fb(68), FRW = fb(40), FRH = 36, FGAP = fb(8);
   s += rectB(FW0, FW0+2*FRW+FGAP, 118, 128, '#0f172a', 'stroke="#475569" stroke-width="1"');
