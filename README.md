@@ -2,7 +2,7 @@
 
 A free, browser-based simulation for teaching entrepreneurship and innovation management. Players run an AI startup through 16 quarters of strategic decisions, navigating funding, hiring, competition, research partnerships, and pivots.
 
-**Version 2.2** | Released September 2026
+**Version 2.2.1** | Released September 2026
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20749017.svg)](https://doi.org/10.5281/zenodo.20749017)
 
@@ -42,6 +42,11 @@ Most players fail on their first attempt, and that is by design. The game teache
 - **Three Mini-Games**: Conference booth, investor pitch, and demo day, each a business activity experienced rather than described
 - **UK AI Ecosystem Context**: Grounded in the real UK AI landscape, with mini-cases inspired by firms such as Isomorphic Labs, Wayve, Synthesia and Darktrace
 - **Trajectory Benchmarking**: Opt-in, anonymous system comparing your performance against your class and all players, with zero-cost in-class tournaments (no registration, no personal data)
+
+## What's New in Version 2.2.1
+
+- **The last day:** when a run ends in failure you watch the office close. The team shake hands with the founder and leave one by one, with a word each; the founder has the last word; the lights go down.
+- **A warning before the rescue:** a quarter that will leave you short is flagged in the quarter brief, with the figures, and you play on. The one emergency rescue now comes only when the cash has actually run out.
 
 ## What's New in Version 2.2
 
