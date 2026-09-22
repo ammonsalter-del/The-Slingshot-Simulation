@@ -1,6 +1,6 @@
 # The Slingshot: An AI Startup Simulation
 
-A free, browser-based simulation for teaching entrepreneurship and innovation management. Players run an AI startup through 16 quarters of strategic decisions, navigating funding, hiring, competition, research partnerships, and pivots.
+A free, open-source startup simulation for teaching entrepreneurship and innovation management, played in the browser. Players run an AI startup through 16 quarters of strategic decisions, navigating funding, hiring, competition, research partnerships, and pivots.
 
 **Version 2.2.1** | Released September 2026
 
