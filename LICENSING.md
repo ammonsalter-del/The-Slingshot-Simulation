@@ -18,7 +18,7 @@ The source code of the game is licensed under the PolyForm Noncommercial License
 Full text: `LICENSE-SOFTWARE-PolyForm-Noncommercial-1.0.0.txt`
 Online: https://polyformproject.org/licenses/noncommercial/1.0.0
 
-Required Notice: Copyright 2026 Ammon Salter (https://slingshotsim.org)
+Required Notice: Copyright 2026 Ammon Salter, Stefano Baruffaldi and Federico Bignone (https://slingshotsim.org)
 
 ## What this means in practice
 

@@ -145,7 +145,7 @@ You are free to share (copy and redistribute) and adapt (remix, transform, build
 
 The software is licensed under the PolyForm Noncommercial License 1.0.0. This covers the source code. Full text: `LICENSE-SOFTWARE-PolyForm-Noncommercial-1.0.0.txt`.
 
-Required Notice: Copyright 2026 Ammon Salter (https://slingshotsim.org)
+Required Notice: Copyright 2026 Ammon Salter, Stefano Baruffaldi and Federico Bignone (https://slingshotsim.org)
 
 `LICENSING.md` says which licence covers what. Commercial use, including paid consulting, corporate training and client workshops, needs the authors' permission.
 
