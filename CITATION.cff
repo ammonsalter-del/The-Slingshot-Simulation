@@ -33,10 +33,12 @@ keywords:
   - teaching
   - educational games
   - decision-making under uncertainty
-license: CC-BY-NC-SA-4.0
-version: '2.2'
+license:
+  - CC-BY-NC-SA-4.0
+  - PolyForm-Noncommercial-1.0.0
+version: '2.2.2'
 doi: 10.5281/zenodo.20749017
-date-released: '2026-09-15'
+date-released: '2026-11-26'
 funding:
   - type: grant
     name: >-

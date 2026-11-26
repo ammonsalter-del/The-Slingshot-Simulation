@@ -30,7 +30,7 @@ If you download the HTML file from the Releases page, you can play entirely offl
 ## For Educators
 
 ### Can I use this in my course?
-Yes! The game is licensed under CC BY-NC-SA 4.0, which means you can freely use it for non-commercial educational purposes. Please provide appropriate attribution (see the Citation section in the README).
+Yes! The game's content is licensed under CC BY-NC-SA 4.0 and its software under the PolyForm Noncommercial License 1.0.0, which means you can freely use it for non-commercial educational purposes. Please provide appropriate attribution (see the Citation section in the README).
 
 ### How should I integrate this into my syllabus?
 See the [Teaching Guide](docs/AI_Startup_Game_Teaching_Guide.pdf) for detailed lesson plans ranging from single sessions to full course integration. The game works well as:
@@ -40,7 +40,7 @@ See the [Teaching Guide](docs/AI_Startup_Game_Teaching_Guide.pdf) for detailed l
 - A capstone activity connecting multiple course themes
 
 ### Can I modify the game for my teaching context?
-Absolutely. Under the CC BY-NC-SA 4.0 license, you can adapt the game for your needs. Fork the repository, make your changes, and share your adaptations under the same license. We'd love to hear about modifications you create.
+Absolutely. Under the CC BY-NC-SA 4.0 license for its content and the PolyForm Noncommercial License 1.0.0 for its software, you can adapt the game for your needs. Fork the repository, make your changes, and share your adaptations under the same licenses. We'd love to hear about modifications you create.
 
 ### How do I compare student performance?
 Currently, the game does not include a centralised tracking system. Students can share their end-game summaries (available as a downloadable PDF) for comparison. A teacher dashboard is on our wishlist for future development—contributions welcome!

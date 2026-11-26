@@ -1,6 +1,6 @@
 # Contributing to The Slingshot
 
-Thank you for your interest in contributing to The Slingshot! This project is open source under CC BY-NC-SA 4.0, and we welcome contributions from educators, developers, and students.
+Thank you for your interest in contributing to The Slingshot! This project is free for non-commercial use, with its educational content under CC BY-NC-SA 4.0 and its software under the PolyForm Noncommercial License 1.0.0 (see `LICENSING.md`), and we welcome contributions from educators, developers, and students.
 
 ## Ways to Contribute
 
@@ -91,6 +91,6 @@ If you're unsure about anything, please ask in the Discussions section before in
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under the same CC BY-NC-SA 4.0 license that covers the project.
+By contributing to this project, you agree that your contributions will be licensed under the same licences that cover the project: CC BY-NC-SA 4.0 for educational content and the PolyForm Noncommercial License 1.0.0 for software (see `LICENSING.md`).
 
 Thank you for helping make The Slingshot better!

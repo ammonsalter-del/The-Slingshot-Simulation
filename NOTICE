@@ -1,10 +1,22 @@
 The Slingshot: An AI Startup Simulation
 Copyright (c) 2025-2026 Ammon Salter, Stefano Baruffaldi and Federico Bignone.
 
-This work — the game and all accompanying materials — is licensed under the
-Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-(CC BY-NC-SA 4.0). See the LICENSE file for the full legal text, or visit
-https://creativecommons.org/licenses/by-nc-sa/4.0/
+The Slingshot has two licences. One covers the educational content. The other
+covers the software.
+
+The educational content (the text, scenarios, characters, pictures and
+documents of the game, and the teaching materials that go with it) is licensed
+under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International License (CC BY-NC-SA 4.0). See LICENSE-CONTENT-CC-BY-NC-SA-4.0.txt
+for the full legal text, or visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The software (the source code of the game) is licensed under the PolyForm
+Noncommercial License 1.0.0. See LICENSE-SOFTWARE-PolyForm-Noncommercial-1.0.0.txt
+for the full legal text, or visit https://polyformproject.org/licenses/noncommercial/1.0.0
+
+Required Notice: Copyright 2026 Ammon Salter (https://slingshotsim.org)
+
+LICENSING.md says which licence covers what.
 
 You are free to share and adapt the material for non-commercial purposes, with
 attribution, indicating any changes, and releasing adaptations under the same

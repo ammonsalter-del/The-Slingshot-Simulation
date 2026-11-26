@@ -2,7 +2,7 @@
 
 A free, open-source startup simulation for teaching entrepreneurship and innovation management, played in the browser. Players run an AI startup through 16 quarters of strategic decisions, navigating funding, hiring, competition, research partnerships, and pivots.
 
-**Version 2.2.1** | Released September 2026
+**Version 2.2.2** | Released November 2026
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20749017.svg)](https://doi.org/10.5281/zenodo.20749017)
 
@@ -42,6 +42,11 @@ Most players fail on their first attempt, and that is by design. The game teache
 - **Three Mini-Games**: Conference booth, investor pitch, and demo day, each a business activity experienced rather than described
 - **UK AI Ecosystem Context**: Grounded in the real UK AI landscape, with mini-cases inspired by firms such as Isomorphic Labs, Wayve, Synthesia and Darktrace
 - **Trajectory Benchmarking**: Opt-in, anonymous system comparing your performance against your class and all players, with zero-cost in-class tournaments (no registration, no personal data)
+
+## What's New in Version 2.2.2
+
+- **Two licences:** the educational content stays under CC BY-NC-SA 4.0, and the software is now under the PolyForm Noncommercial License 1.0.0. The page shown before play says so.
+- **Small corrections:** one HR event is removed, and a display error in the unicorn window is corrected.
 
 ## What's New in Version 2.2.1
 
@@ -130,11 +135,19 @@ BibTeX:
 }
 ```
 
-## License
+## Licences
 
-This work is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). See LICENSE file for details.
+The Slingshot has two licences.
+
+The educational content is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). This covers the text, scenarios, characters, pictures and documents, and the teaching materials. Full text: `LICENSE-CONTENT-CC-BY-NC-SA-4.0.txt`.
 
 You are free to share (copy and redistribute) and adapt (remix, transform, build upon) the material, under the terms of attribution, non-commercial use, and share-alike.
+
+The software is licensed under the PolyForm Noncommercial License 1.0.0. This covers the source code. Full text: `LICENSE-SOFTWARE-PolyForm-Noncommercial-1.0.0.txt`.
+
+Required Notice: Copyright 2026 Ammon Salter (https://slingshotsim.org)
+
+`LICENSING.md` says which licence covers what. Commercial use, including paid consulting, corporate training and client workshops, needs the authors' permission.
 
 ## Acknowledgments
 
